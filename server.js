@@ -33,7 +33,7 @@ db.connect((err) => {
 
 // ROTA 1: Buscar restaurantes ativos
 app.get('/api/restaurantes', (req, res) => {
-    const query = 'SELECT id, nome, regiao, categoria FROM restaurantes WHERE status = "Ativo"';
+    const query = "SELECT id, nome, regiao, categoria FROM restaurantes WHERE status = 'Ativo'";
     
     db.query(query, (err, results) => {
         if (err) {
